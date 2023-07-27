@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-JENKINS_URL='http://http://16.16.115.187:8080'
+JENKINS_URL='http://localhost:8080'
 ### please mention the public ip address of jenkins machine
 JENKINS_CRUMB=$(curl -s --cookie-jar /tmp/cookies -u admin:admin ${JENKINS_URL}/crumbIssuer/api/json | jq .crumb -r)
 
